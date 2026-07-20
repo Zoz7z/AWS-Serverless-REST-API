@@ -1,0 +1,13 @@
+resource "aws_api_gateway_rest_api" "api" {
+
+  name = "${var.project_name}-api"
+}
+
+resource "aws_api_gateway_resource" "tasks" {
+
+  rest_api_id = aws_api_gateway_rest_api.api.id
+
+  parent_id = aws_api_gateway_rest_api.api.root_resource_id
+
+  path_part = "tasks"
+}
