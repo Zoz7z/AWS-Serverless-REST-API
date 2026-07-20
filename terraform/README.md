@@ -1,1 +1,1 @@
-
+Terraform files used to provision AWS infrastructure for the Serverless REST API project.
